@@ -5,16 +5,15 @@ programa
 	
 	funcao inicio()
 	{
-		inteiro alternativa
 		real valorH = 3.00, valorC = 2.5, valorF = 2.5, valorR = 1.00, valorM = 3.00, total = 0.0, qtdH = 0.0, qtdC = 0.0, qtdF = 0.0, qtdR = 0.0, qtdM = 0.0, gorjeta = 0.0
-		caracter pedir, groja 
+		caracter pedir, groja, alternativa 
 		
 
 		escreva("               CARDADPIO\n",
 		"1 - Hambúrguer................. R$ 3,00\n",
 		"2 - Cheeseburger.............. R$ 2,50\n",
 		"3 - Fritas............................ R$ 2,50\n",
-		"4 - Refrigerante................. R$ 1,00\n",
+		"4 - Refrigerante................. R$ 31,00\n",
 		"5 - Milkshake..................... R$ 3,00\n",
 		"0 - Sair\n")
 
@@ -31,27 +30,27 @@ programa
 			
 					escolha(alternativa){
 
-					caso 1: qtdH++
+					caso '1': qtdH++
 						escreva("           SEU PEDIDO:\n", qtdH, " hambuúrguer\n", qtdC, " cheeseburguer\n", qtdF, " fritas\n", qtdR, " refrigerante\n", qtdM, " milkshake\n")
 						u.aguarde(1000)
 						pare
-					caso 2: qtdC++
+					caso '2': qtdC++
 						escreva("           SEU PEDIDO:\n", qtdH, " hambuúrguer\n", qtdC, " cheeseburguer\n", qtdF, " fritas\n", qtdR, " refrigerante\n", qtdM, " milkshake\n")
 						u.aguarde(1000)
 						pare
-					caso 3: qtdF++
+					caso '3': qtdF++
 						escreva("           SEU PEDIDO:\n", qtdH, " hambuúrguer\n", qtdC, " cheeseburguer\n", qtdF, " fritas\n", qtdR, " refrigerante\n", qtdM, " milkshake\n")
 						u.aguarde(1000)
 						pare
-					caso 4: qtdR++
+					caso '4': qtdR++
 						escreva("           SEU PEDIDO:\n", qtdH, " hambuúrguer\n", qtdC, " cheeseburguer\n", qtdF, " fritas\n", qtdR, " refrigerante\n", qtdM, " milkshake\n")
 						u.aguarde(1000)
 						pare
-					caso 5: qtdM++
+					caso '5': qtdM++
 						escreva("           SEU PEDIDO:\n", qtdH, " hambuúrguer\n", qtdC, " cheeseburguer\n", qtdF, " fritas\n", qtdR, " refrigerante\n", qtdM, " milkshake\n")
 						u.aguarde(1000)
 						pare
-					caso 0:
+					caso '0':
 						limpa()
 
 						escreva("Adiconar os 10% do garçom? \nSim(s/S) Não (n/N):")
@@ -98,11 +97,11 @@ programa
 							}
 						}
 
-						pare
+							pare
 						
-					caso contrario:
-						escreva("\nValor incorreto!\n")
-						pare
+						caso contrario:
+							escreva("\nValor incorreto!\n")
+							pare
 						
 					}
 				}enquanto(pedir == 's' ou pedir == 'S')
@@ -124,7 +123,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3862; 
+ * @POSICAO-CURSOR = 1993; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
