@@ -7,11 +7,12 @@ programa
 		logico teste = verdadeiro
 		cadeia convidados[50]
 		inteiro opcao, posicao, total = 0, preco = 120, somaindice = 0
+		
 
-		convidados[0] = "hugo"
-		convidados[1] = "alexia"
-		convidados[2] = "duda"
-		convidados[49] = "mel"
+		//convidados[0] = "hugo"
+		//convidados[1] = "alexia"
+		//convidados[2] = "duda"
+		//convidados[49] = "mel"
 
 		escreva("MENU DE OPÇÕES:\n1- Inserir nome:\n2- Listar convidados:\n3- Remover nome:\n4 - Pagamento:\n0- Sair:")
 		
@@ -98,7 +99,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 534; 
+ * @POSICAO-CURSOR = 189; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
