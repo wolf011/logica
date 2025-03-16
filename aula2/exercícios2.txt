@@ -1,0 +1,53 @@
+1) Leia um número e retorne como resposta se ele é positivo, negativo ou zero. 
+
+2) Criar um algoritmo que receba quatro notas e calcule a média. Se a média for maior que 7 deverá ser exibida a mensagem aprovado
+     caso contrário deverá ser exibida a mensagem reprovado.
+
+3) Escreva um programa que encontre o valor máximo entre 2 números 
+Exemplo: 
+Entrada: 
+Digite um número: 2 
+Digite outro número: 1 
+Saída: 
+O número 2 é maior que o número 1 
+
+
+4) Escreva um programa que funcione como uma calculadora simples de soma (+), subtração(-), multiplicação(*) e divisão(/) 
+Exemplo:
+Entrada: 10 * 2 
+Saída esperada: 10 * 2 = 20 
+
+
+5) Implemente um programa que considera as seguintes opções para determinar se o usuário usará a fila preferencial ou a fila comum. 
+O usuário usa a fila preferencial caso : 
+
+● Possui mais de 65 anos : Usa fila preferencial 
+● É deficiente físico : Usa fila preferencial 
+● É gestante : Usa fila preferencial 
+
+O programa recebe como entrada nome, a idade, e a condição especial do usuário, se houver. 
+Exemplo de entrada: Maria, 22,  deficiente 
+Saída esperada: Fila preferencial 
+
+6) Faça um programa para que leia a idade e o nome de um jogador de futebol.
+Categorias:
+De 10-17: categorias de base
+   18-40: profissional
+   acima de 40: master
+   abaixo de 10: escolinha
+A resposta deverá ser conforme exemplo abaixo:
+Entrada:
+nome: João
+idade: 30
+Categoria: Profissional
+
+
+ 7) A padaria Hotpão vende uma certa quantidade de pães franceses e uma quantidade de broas a cada dia. Cada pãozinho custa R$ 0,50 e a broa custa R$ 5,00. Ao final do dia, o dono quer saber quanto arrecadou com a venda dos pães e broas (juntos), e quanto deve guardar numa conta de poupança (10% do total arrecadado). Você foi contratado para fazer os cálculos para o dono. Com base nestes fatos, faça um algoritmo para ler as quantidades de pães e de broas, e depois calcular os dados solicitados.
+
+
+
+8) Um motorista deseja colocar no seu tanque X reais de gasolina. Escreva um algoritmo para ler o preço do litro da gasolina e o valor do pagamento, e exibir quantos litros ele conseguiu colocar no tanque.
+
+
+
+9) Faça um algoritmo que leia um número e retorne como resposta se ele é par ou impar
