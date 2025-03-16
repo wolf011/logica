@@ -163,12 +163,17 @@ programa
 					leia(linha)
 
 					enquanto(loop2 == verdadeiro){
-						se(linha-1 < 12 e assentos[linha-1][coluna3] == 0){
+						se(linha-1 < 0){
+							escreva("\nOpção inválida.\nPROGRAMA FINALIZADO\n")
+							loop1 = falso
+							pare
+						}
+						senao se(linha-1 < 12 e assentos[linha-1][coluna3] == 0){
 							assentos[linha-1][coluna3] = 1
 							loop2 = falso					
 						}
 						senao se(linha-1 < 12 e assentos[linha-1][coluna3] != 0){
-							escreva("\nO assento escolhido já se encontra ocupado!")
+							escreva("\nO assento escolhido já se encontra ocupado!\n")
 							loop2 = falso
 						}
 						senao{
@@ -205,7 +210,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3393; 
+ * @POSICAO-CURSOR = 3756; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
