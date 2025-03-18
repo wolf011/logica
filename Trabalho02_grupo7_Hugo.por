@@ -470,11 +470,32 @@ programa
 	}
 
 
+	//Verifica se o número da vaga digitado está entre 1 e 30.
+	funcao inteiro verificaIntervalo(){
+		inteiro vaga = 0
+		
+		enquanto(verdadeiro){
+					
+			escreva("\nInsira sua vaga de preferência (1-30): ")
+			leia(vaga)
+			se(vaga > 0 e vaga < 31){
+				pare
+			}
+			senao{
+				escreva("\nA vaga ", vaga, " não existe! Tente dnv.\n")
+				u.aguarde(1000)
+				limpa()	
+			}
+		}
+		retorne vaga
+	}
+
+
 	// Insere 0 para ocupar a vaga.
 	funcao entrada(inteiro &m[][])
 	{	
 
-		inteiro vaga, contador1 = 0
+		inteiro contador1 = 0
 	
 		para (inteiro i = 0; i < linhas; i++) {
 			para (inteiro j = 0; j < colunas; j++) {
@@ -482,29 +503,19 @@ programa
 			}
 		}
 		
-		se(contador1 > 0){
-			enquanto(verdadeiro){
-					
-				escreva("\nInsira sua vaga de preferência (1-30): ")
-				leia(vaga)
-				se(vaga > 0 e vaga < 31){
-					se(verificarVacancia(vaga) == "Vaga disponível!"){
-						m[acessaMatriz(vaga, 2)][acessaMatriz(vaga, 3)] = 0
-						escreva("\nVaga ", vaga, " reservada com sucesso!\n")
-						u.aguarde(1000)
-						pare	
-					}senao{
-						escreva("\nVaga ", vaga, " indisponível!")
-						u.aguarde(1000)
-						pare
-					}
-				}
-			
-				senao{
-					escreva("\nA vaga ", vaga, " não existe! Tente dnv.\n")	
-				}
+		enquanto(contador1 > 0){
+			inteiro vagaEscolhidaIn = verificaIntervalo()
+			se(verificarVacancia(vagaEscolhidaIn) == "Vaga disponível!"){
+				m[acessaMatriz(vagaEscolhidaIn, 2)][acessaMatriz(vagaEscolhidaIn, 3)] = 0
+				escreva("\nVaga ", vagaEscolhidaIn, " reservada com sucesso!\n")
+				u.aguarde(1000)
+				pare	
+			}senao{
+				escreva("\nVaga ", vagaEscolhidaIn, " indisponível!")
+				u.aguarde(1000)
+				pare
 			}
-		}senao{
+		}se (contador1 <= 0){
 			escreva("\nEstacionamento LOTADO!")
 			u.aguarde(1000)
 		}
@@ -516,7 +527,7 @@ programa
 	// Devolve o número da respectiva vaga para desocupá-la
 	funcao saida(inteiro &mat[][])
 	{
-		inteiro vag, contador2 = 0
+		inteiro contador2 = 0
 
 		para (inteiro i = 0; i < linhas; i++) {
 			para (inteiro j = 0; j < colunas; j++) {
@@ -524,31 +535,20 @@ programa
 			}
 		}
 		
-		se(contador2 < 465){
-			enquanto(verdadeiro){
-					
-				escreva("\nInsira sua vaga de preferência (1-30): ")
-				leia(vag)
-				se(vag > 0 e vag < 31){
-					se(verificarVacancia(vag) == "Vaga disponível!"){ 
-						escreva("\nA vaga ", vag-1, " está vazia!\n")
-						u.aguarde(1000)
-						pare	
-					}senao{
-						mat[acessaMatriz(vag, 2)][acessaMatriz(vag, 3)] = acessaMatriz(vag, 4)
-						escreva("\nVaga ", vag, " liberada com sucesso!\n")
-						u.aguarde(1000)
-						pare
-					}
-				}
-			
-				senao {
-					escreva("\nA vaga ", vag, " não existe! Tente dnv.\n")
-					u.aguarde(1000)	
-				}
+		enquanto(contador2 < 465){
+			inteiro vagaEscolhidaDel = verificaIntervalo()
+			se(verificarVacancia(vagaEscolhidaDel) == "Vaga disponível!"){ 
+				escreva("\nA vaga ", vagaEscolhidaDel, " está vazia!\n")
+				u.aguarde(1000)
+				pare	
+			}senao{
+				mat[acessaMatriz(vagaEscolhidaDel, 2)][acessaMatriz(vagaEscolhidaDel, 3)] = acessaMatriz(vagaEscolhidaDel, 4)
+				escreva("\nVaga ", vagaEscolhidaDel, " liberada com sucesso!\n")
+				u.aguarde(1000)
+				pare
 			}
-			
-		}senao{
+		}	
+		se(contador2 >= 465){
 			escreva("\nEstacionamento VAZIO.\n")
 			u.aguarde(1000)
 		}
@@ -606,7 +606,7 @@ programa
 			escreva("          MENU\n---------------------------\n",
 			"1-Entrada de Veículo\n",
 			"2-Saída de Veículo\n",
-			"3-Listar vags\n",
+			"3-Listar vagas\n",
 			"4-Sair do programa\n",
 			"---------------------------\n",
 			"Informe sua opção: ")
@@ -647,7 +647,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 718; 
+ * @POSICAO-CURSOR = 6355; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
