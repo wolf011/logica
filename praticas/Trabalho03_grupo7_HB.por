@@ -2,10 +2,10 @@ programa
 {
 	inclua biblioteca Util --> u
 	
-		
+		
 	const inteiro numQuartos = 24
 	inteiro totalConsultas = 0, valorTotalConsultas = 0, totalIternacoes = 0, valorTotalInternacoes = 0
-	logico quartos[numQuartos]
+	logico quartos[numQuartos]
 	cadeia nomes[numQuartos], telefones[numQuartos], especialidades
 
 
@@ -19,7 +19,7 @@ programa
 
 
 
-	//Consulta.
+	// Consulta.
 	funcao consultas(){
 		cadeia nom, tel
 		limpa()
@@ -38,7 +38,7 @@ programa
 	}
 
 
-	//
+	// Internação
 	funcao internacao(){
 		cadeia nom1, tel2
 		inteiro qt
@@ -98,7 +98,7 @@ programa
 	}
 
 
-	//Calcula o faturamento.
+	// Calcula o faturamento.
 	funcao faturamento(){
 
 		limpa()
@@ -115,7 +115,7 @@ programa
 	}
 
 
-	//Menu de opções
+	// Menu de opções
 	funcao menu()
 	{
 		logico loop1 = verdadeiro
@@ -163,7 +163,7 @@ programa
 
 	
 	funcao inicio()
-	{	
+	{	
 		//Inicializando os quartos.
 		criaQuartos(numQuartos, quartos)
 
@@ -175,7 +175,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1552; 
+ * @POSICAO-CURSOR = 3234; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
