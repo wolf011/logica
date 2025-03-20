@@ -19,7 +19,6 @@ programa
 	}
 
 
-
 	// Consulta.
 	funcao consultas(){
 		cadeia nom, tel
@@ -34,7 +33,7 @@ programa
 		se(especialidades == "Pediatria" ou especialidades == "pediatria" ou especialidades == "PEDIATRIA"){
 			valorTotalConsultas += 150
 		}senao{
-			valorTotalConsultas +=120
+			valorTotalConsultas += 120
 		}
 	}
 
@@ -58,7 +57,7 @@ programa
 					telefones[qt-1] = tel2
 					quartos[qt-1] = falso
 					totalIternacoes++
-					escreva("\nQuarto reservado com sucesso !\n")
+					escreva("\nQuarto reservado com sucesso!\n")
 					pare				
 				}senao se(qt > 0 e qt < 25 e quartos[qt-1] == falso){
 					escreva("\nQuarto ocupado!\n")
@@ -66,7 +65,7 @@ programa
 					limpa()
 					pare
 				}senao{
-					escreva("\nO valor de quarto informado não é válido.\n")
+					escreva("\nO número de quarto informado não é válido.\n")
 					u.aguarde(1000)
 					limpa()
 					pare
@@ -155,7 +154,7 @@ programa
 				loop1 = falso
 				pare
 			caso contrario: 
-				escreva("\nValor inválido!!\n")
+				escreva("\nOpção inválida!!\n")
 				u.aguarde(1000)
 				limpa()
 			}
@@ -176,7 +175,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 298; 
+ * @POSICAO-CURSOR = 3374; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
