@@ -4,7 +4,7 @@ programa
 	inclua biblioteca Util --> u
 	
 		
-	const inteiro numQuartos = 24
+	const inteiro numQuartos = 20
 	inteiro totalConsultas = 0, valorTotalConsultas = 0, totalIternacoes = 0, valorTotalInternacoes = 0
 	logico quartos[numQuartos]
 	cadeia nomes[numQuartos], telefones[numQuartos], especialidades
@@ -48,18 +48,18 @@ programa
 		leia(nom1)
 		escreva("\nInsira o telefone do paciente: ")
 		leia(tel2)
-		escreva("\nInsira o quarto desejado (1-24): ")
+		escreva("\nInsira o quarto desejado (1-20): ")
 		leia(qt)
-		se(totalIternacoes < 24){
+		se(totalIternacoes < 20){
 			enquanto(verdadeiro){
-				se (qt > 0 e qt < 25 e quartos[qt-1] == verdadeiro){
+				se (qt > 0 e qt < 21 e quartos[qt-1] == verdadeiro){
 					nomes[qt-1] = nom1
 					telefones[qt-1] = tel2
 					quartos[qt-1] = falso
 					totalIternacoes++
 					escreva("\nQuarto reservado com sucesso!\n")
 					pare				
-				}senao se(qt > 0 e qt < 25 e quartos[qt-1] == falso){
+				}senao se(qt > 0 e qt < 21 e quartos[qt-1] == falso){
 					escreva("\nQuarto ocupado!\n")
 					u.aguarde(1000)
 					limpa()
@@ -166,7 +166,6 @@ programa
 	{	
 		//Inicializando os quartos.
 		criaQuartos(numQuartos, quartos)
-
 		menu()
 	}
 }
@@ -175,7 +174,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3374; 
+ * @POSICAO-CURSOR = 953; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
